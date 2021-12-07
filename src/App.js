@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import data from "./data/henry_iv.json";
+import React from "react";
+import { usePagination } from "./custom-hooks/usePagination";
+import { useShowData } from "./custom-hooks/useShowData";
+import { Content } from "./components/content";
+import { Pagination } from "./components/pagination-buttons";
 
 function App() {
+  const [page, handlePrevious, handleNext] = usePagination(data);
+  const [showLines] = useShowData(page, data, 10);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1 className="app-heading">Henry IV Play</h1>
+      <Content showLines={showLines} />
+      <Pagination handlePrevious={handlePrevious} handleNext={handleNext} />
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.dialouge {
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.dialouge h5 {
+  margin: 5px;
+}
+.dialouge p {
+  margin: auto;
+  margin: 5px;
+}

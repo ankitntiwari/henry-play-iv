@@ -1,0 +1,15 @@
+.pagination {
+  position: fixed;
+  bottom: 8vh;
+}
+.pagination button {
+  border: none;
+  margin: 5px;
+  text-decoration: none;
+  width: 80px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+}
